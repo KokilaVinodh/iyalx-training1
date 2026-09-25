@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IyalX Training | Learn. Grow. Lead.</title>
+<meta name="description" content="IyalX Training — practical learning, professional development and corporate training programs.">
+<style>
+:root{--navy:#101a3a;--purple:#6c4cf1;--pink:#d946ef;--light:#f7f7fb;--text:#20243a;--muted:#667085;--white:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--text);background:#fff;line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid #eee}
+.navbar{height:74px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:27px;font-weight:900;letter-spacing:-1px;color:var(--navy)}
+.logo span{color:var(--purple)}
+.navlinks{display:flex;gap:28px;align-items:center}
+.navlinks a{font-weight:600;color:#454a60;font-size:14px}
+.navlinks a:hover{color:var(--purple)}
+.btn{display:inline-block;padding:13px 21px;border-radius:10px;font-weight:800;border:0;cursor:pointer}
+.btn-primary{background:linear-gradient(135deg,var(--purple),var(--pink));color:#fff;box-shadow:0 10px 25px #6c4cf133}
+.btn-light{background:#fff;color:var(--navy);border:1px solid #e6e6ef}
+.hero{background:radial-gradient(circle at 80% 20%,#e8dcff 0,transparent 30%),linear-gradient(135deg,#f8f7ff,#fff 60%);padding:100px 0 90px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:55px;align-items:center}
+.badge{display:inline-block;padding:7px 12px;border-radius:30px;background:#eee9ff;color:#5a3bd0;font-weight:800;font-size:13px;margin-bottom:20px}
+h1{font-size:clamp(44px,6vw,72px);line-height:1.02;letter-spacing:-3px;color:var(--navy);margin-bottom:22px}
+h1 span{color:var(--purple)}
+.hero p{font-size:18px;color:var(--muted);max-width:610px;margin-bottom:30px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero-card{background:var(--navy);border-radius:28px;padding:35px;color:#fff;box-shadow:0 25px 60px #101a3a2b;position:relative;overflow:hidden}
+.hero-card:after{content:"";position:absolute;width:220px;height:220px;border-radius:50%;background:#8b5cf6;right:-90px;top:-80px;opacity:.45}
+.hero-card h3{font-size:27px;position:relative;z-index:1;margin-bottom:25px}
+.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px;position:relative;z-index:1}
+.stat{background:#ffffff12;border:1px solid #ffffff1c;border-radius:17px;padding:20px}
+.stat b{font-size:29px;display:block}.stat small{color:#d8dbea}
+section{padding:85px 0}
+.section-head{text-align:center;max-width:680px;margin:0 auto 45px}
+.section-head h2{font-size:40px;letter-spacing:-1.5px;color:var(--navy);margin-bottom:10px}
+.section-head p{color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{padding:28px;border:1px solid #e9e9f0;border-radius:20px;background:#fff;transition:.25s;box-shadow:0 8px 30px #1b15310b}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 40px #1b15311a}
+.icon{width:52px;height:52px;border-radius:14px;background:#eee9ff;color:var(--purple);display:grid;place-items:center;font-size:24px;margin-bottom:20px}
+.card h3{margin-bottom:9px;color:var(--navy);font-size:21px}.card p{color:var(--muted);font-size:15px}
+.dark{background:var(--navy);color:#fff}.dark .section-head h2{color:#fff}.dark .section-head p{color:#c8ccdc}
+.dark .card{background:#192348;border-color:#2a3357}.dark .card h3{color:#fff}.dark .card p{color:#c6cbe0}.dark .icon{background:#ffffff12}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+.about-box{background:linear-gradient(145deg,#f0ebff,#fff);border-radius:28px;padding:35px;min-height:340px;display:flex;flex-direction:column;justify-content:center}
+.about-box .big{font-size:90px;font-weight:900;color:var(--purple);line-height:1}
+.about h2{font-size:42px;line-height:1.1;color:var(--navy);margin-bottom:18px}
+.about p{color:var(--muted);margin-bottom:20px}
+.checks{display:grid;gap:12px}.checks div{font-weight:700}.checks span{color:#6c4cf1;margin-right:8px}
+.contact{background:#f7f7fb}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:35px}
+.contact-info h2{font-size:42px;color:var(--navy);line-height:1.1;margin-bottom:15px}.contact-info p{color:var(--muted);margin-bottom:25px}
+.info{padding:17px 0;border-bottom:1px solid #e4e4ec}.info b{display:block;color:var(--navy)}.info span{color:var(--muted)}
+form{background:#fff;padding:30px;border-radius:22px;border:1px solid #e8e8ef;box-shadow:0 10px 35px #101a3a0b}
+label{font-size:13px;font-weight:800;display:block;margin-bottom:6px;color:#34384d}
+input,textarea,select{width:100%;padding:13px 14px;border:1px solid #dddde7;border-radius:9px;margin-bottom:17px;font:inherit;outline:none}
+input:focus,textarea:focus,select:focus{border-color:var(--purple)}
+textarea{min-height:110px;resize:vertical}
+footer{background:#0a1029;color:#b9bfd2;padding:30px 0}.footer{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer strong{color:#fff;font-size:20px}
+@media(max-width:800px){.navlinks{display:none}.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.hero{padding-top:65px}section{padding:65px 0}h1{letter-spacing:-2px}.section-head h2,.about h2,.contact-info h2{font-size:34px}}
+</style>
+</head>
+<body>
+<nav><div class="container navbar">
+<a class="logo" href="#">Iyal<span>X</span></a>
+<div class="navlinks">
+<a href="#about">About</a><a href="#programs">Programs</a><a href="#corporate">Corporate</a><a href="#contact">Contact</a>
+<a class="btn btn-primary" href="#contact">Enquire Now</a>
+</div></div></nav>
+
+<header class="hero"><div class="container hero-grid">
+<div>
+<div class="badge">TRAINING • DEVELOPMENT • GROWTH</div>
+<h1>Build skills.<br><span>Unlock potential.</span></h1>
+<p>IyalX Training helps students, professionals and organisations learn practical skills, strengthen confidence and turn knowledge into measurable growth.</p>
+<div class="hero-actions"><a class="btn btn-primary" href="#programs">Explore Programs</a><a class="btn btn-light" href="#contact">Talk to Us</a></div>
+</div>
+<div class="hero-card"><h3>Your next level starts here.</h3><div class="stat-grid">
+<div class="stat"><b>01</b><small>Practical Learning</small></div>
+<div class="stat"><b>02</b><small>Expert Guidance</small></div>
+<div class="stat"><b>03</b><small>Career Focus</small></div>
+<div class="stat"><b>04</b><small>Business Growth</small></div>
+</div></div>
+</div></header>
+
+<section id="programs"><div class="container">
+<div class="section-head"><h2>Training that moves you forward</h2><p>Flexible learning experiences designed around real-world skills and outcomes.</p></div>
+<div class="cards">
+<div class="card"><div class="icon">🎯</div><h3>Professional Skills</h3><p>Communication, leadership, workplace effectiveness, confidence and essential career skills.</p></div>
+<div class="card"><div class="icon">💻</div><h3>Digital Skills</h3><p>Practical digital learning designed to help learners work smarter and stay future-ready.</p></div>
+<div class="card"><div class="icon">📈</div><h3>Career Development</h3><p>Interview preparation, resume guidance, workplace readiness and career-focused coaching.</p></div>
+<div class="card"><div class="icon">🏢</div><h3>Corporate Training</h3><p>Custom workshops for teams, managers and organisations seeking stronger performance.</p></div>
+<div class="card"><div class="icon">🧠</div><h3>Personal Growth</h3><p>Build confidence, communication and habits that support long-term personal development.</p></div>
+<div class="card"><div class="icon">🎓</div><h3>Student Programs</h3><p>Industry-oriented learning experiences that help students prepare for their next step.</p></div>
+</div></div></section>
+
+<section id="about" class="about"><div class="container about-grid">
+<div class="about-box"><div class="big">IX</div><h3>Learn with purpose.</h3><p>Practical training. Clear direction. Continuous growth.</p></div>
+<div><h2>Learning should create possibilities.</h2><p>IyalX is built around a simple idea: training should be practical, engaging and connected to real-life goals.</p><div class="checks">
+<div><span>✓</span> Practical and interactive sessions</div>
+<div><span>✓</span> Industry-relevant learning</div>
+<div><span>✓</span> Learner-focused approach</div>
+<div><span>✓</span> Custom programs for organisations</div>
+</div></div>
+</div></section>
+
+<section id="corporate" class="dark"><div class="container">
+<div class="section-head"><h2>For organisations that want to grow</h2><p>Partner with IyalX for customised employee and leadership development programs.</p></div>
+<div class="cards"><div class="card"><div class="icon">👥</div><h3>Team Workshops</h3><p>Interactive sessions built around communication, collaboration and workplace performance.</p></div>
+<div class="card"><div class="icon">👑</div><h3>Leadership</h3><p>Development programs for emerging leaders, managers and high-potential professionals.</p></div>
+<div class="card"><div class="icon">🛠️</div><h3>Custom Training</h3><p>Tell us your business challenge and we can shape a training experience around your goals.</p></div></div>
+</div></section>
+
+<section id="contact" class="contact"><div class="container contact-grid">
+<div class="contact-info"><h2>Let's build your next learning journey.</h2><p>Tell us what you want to learn or what your organisation wants to achieve.</p>
+<div class="info"><b>Email</b><span>hello@iyalx.com</span></div>
+<div class="info"><b>Phone</b><span>+91 XXXXX XXXXX</span></div>
+<div class="info"><b>Location</b><span>Chennai, Tamil Nadu, India</span></div>
+</div>
+<form onsubmit="submitForm(event)"><label>Name</label><input required placeholder="Your name"><label>Email</label><input type="email" required placeholder="you@example.com"><label>I'm interested in</label><select><option>Professional Training</option><option>Corporate Training</option><option>Student Programs</option><option>Career Development</option></select><label>Message</label><textarea placeholder="Tell us what you are looking for..."></textarea><button class="btn btn-primary" type="submit">Send Enquiry</button><p id="formMsg" style="margin-top:12px;color:#6c4cf1;font-weight:700"></p></form>
+</div></section>
+
+<footer><div class="container footer"><div><strong>IyalX Training</strong><br><small>Learn. Grow. Lead.</small></div><div>© 2026 IyalX Training. All rights reserved.</div></div></footer>
+<script>
+function submitForm(e){e.preventDefault();document.getElementById('formMsg').textContent='Thank you! Your enquiry has been recorded. Connect your email/WhatsApp before publishing for live enquiries.';}
+</script>
+</body></html>
